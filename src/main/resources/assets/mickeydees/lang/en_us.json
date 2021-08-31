@@ -1,9 +1,14 @@
 {
     "item.mickeydees.mickey_dees": "§e§n§oMickey Dees Dev Item",
-    "item.mickeydees.flimsy_spatula": "Flimsy Spatula",
     "item.mickeydees.raw_nuggie": "Raw Nuggie",
     "item.mickeydees.cooked_nuggie": "Cooked Nuggie",
-    "block.mickeydees.nuggie_ore": "Nuggie Ore"
+    "block.mickeydees.nuggie_ore": "Nuggie Ore",
 
 
+
+    "item.mickeydees.flimsy_spatula": "Flimsy Spatula",
+    "item.mickeydees.gold_spatula": "Gold Spatula",
+    "item.mickeydees.diamond_spatula": "Diamond Spatula",
+    "item.mickeydees.greasy_spatula": "Greasy Spatula",
+    "item.mickeydees.creative_spatula": "§d§lCreative Spatula"
 }

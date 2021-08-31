@@ -28,12 +28,19 @@ import net.minecraft.world.gen.feature.Feature;
 
 public class MickeyDees implements ModInitializer {
 	
-	public static final Item MICKEY_DEES = new Item(new Item.Settings().group(ItemGroup.MISC));
-	public static final Item FLIMSY_SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	public static final Item MICKEY_DEES = new Item(new Item.Settings().group(ItemGroup.MISC)); // Dev item
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
 	public static final Item RAW_NUGGIE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.RAW_NUGGIE));
 	public static final Item COOKED_NUGGIE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.COOKED_NUGGIE));
 	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
+
+
+	// Spatulas
+	public static final Item FLIMSY_SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	public static final Item GOLD_SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	public static final Item DIAMOND_SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	public static final Item GREASY_SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	public static final Item CREATIVE_SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
 
 
 	@Override
@@ -44,11 +51,20 @@ public class MickeyDees implements ModInitializer {
 
 
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
-		Registry.register(Registry.ITEM, new Identifier("mickeydees", "flimsy_spatula"), FLIMSY_SPATULA);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_nuggie"), RAW_NUGGIE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_nuggie"), COOKED_NUGGIE);
 		Registry.register(Registry.BLOCK, new Identifier("mickeydees", "nuggie_ore"), NUGGIE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+
+
+
+
+		// Spatulas
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "flimsy_spatula"), FLIMSY_SPATULA);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "gold_spatula"), GOLD_SPATULA);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "diamond_spatula"), DIAMOND_SPATULA);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "greasy_spatula"), GREASY_SPATULA);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "creative_spatula"), CREATIVE_SPATULA);
 
 
 		RegistryKey<ConfiguredFeature<?, ?>> nuggieOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("mickeydees", "nuggie_ore"));
