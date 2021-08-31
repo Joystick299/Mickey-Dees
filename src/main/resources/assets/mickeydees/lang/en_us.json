@@ -1,4 +1,9 @@
 {
     "item.mickeydees.mickey_dees": "§e§n§oMickey Dees Dev Item",
-    "item.mickeydees.spatula": "§cGreasy Spatula"
+    "item.mickeydees.flimsy_spatula": "Flimsy Spatula",
+    "item.mickeydees.raw_nuggie": "Raw Nuggie",
+    "item.mickeydees.cooked_nuggie": "Cooked Nuggie",
+    "block.mickeydees.nuggie_ore": "Nuggie Ore"
+
+
 }
