@@ -34,20 +34,8 @@ public class MickeyDees implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		// This is a test -Joystick
 
 	Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
 	Registry.register(Registry.ITEM, new Identifier("mickeydees", "spatula"), SPATULA);
 	}
 }
-
-//frick u riley this isnt gonna work
-
-
-
-
-
-// Test -joystick | 
-
-
-//this is line 50 you fuck face
