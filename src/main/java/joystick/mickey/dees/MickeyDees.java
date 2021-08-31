@@ -26,6 +26,7 @@ import net.minecraft.world.gen.feature.Feature;
 public class MickeyDees implements ModInitializer {
 	
 	public static final Item MICKEY_DEES = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Item SPATULA = new Item(new Item.Settings().group(ItemGroup.TOOLS));
 
 	@Override
 	public void onInitialize() {
@@ -34,6 +35,6 @@ public class MickeyDees implements ModInitializer {
 		// Proceed with mild caution.
 
 	Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
-
+	Registry.register(Registry.ITEM, new Identifier("mickeydees", "spatula"), SPATULA);
 	}
 }
