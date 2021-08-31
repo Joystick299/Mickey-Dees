@@ -38,3 +38,5 @@ public class MickeyDees implements ModInitializer {
 	Registry.register(Registry.ITEM, new Identifier("mickeydees", "spatula"), SPATULA);
 	}
 }
+
+//frick u riley this isnt gonna work
