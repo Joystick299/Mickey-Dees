@@ -3,7 +3,8 @@
 ## A famous restaurant chain coming to the Overworld!
 Requires [FabricAPI](https://www.curseforge.com/minecraft/mc-mods/fabric-api) <br/>
 Download on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/mickey-dees)
-# 
+#
+
 ### INTRODUCING UPDATE 1.0 (The Nuggie Update)
 
 This update introduces new food, tool, and ore items!:
