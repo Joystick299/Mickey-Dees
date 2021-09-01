@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolItem;
@@ -29,10 +30,14 @@ import net.minecraft.world.gen.feature.Feature;
 public class MickeyDees implements ModInitializer {
 	
 	public static final Item MICKEY_DEES = new Item(new Item.Settings().group(ItemGroup.MISC)); // Dev item
+
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
+	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
+
+	// Foods
 	public static final Item RAW_NUGGIE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.RAW_NUGGIE));
 	public static final Item COOKED_NUGGIE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.COOKED_NUGGIE));
-	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
+	public static final Item BIG_JON = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.BIG_JON));
 
 
 	// Spatulas
@@ -51,13 +56,16 @@ public class MickeyDees implements ModInitializer {
 
 
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
-		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_nuggie"), RAW_NUGGIE);
-		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_nuggie"), COOKED_NUGGIE);
 		Registry.register(Registry.BLOCK, new Identifier("mickeydees", "nuggie_ore"), NUGGIE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
 
 
+
+		// Foods
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_nuggie"), RAW_NUGGIE);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "big_jon"), BIG_JON);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_nuggie"), COOKED_NUGGIE);
 
 		// Spatulas
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "flimsy_spatula"), FLIMSY_SPATULA);
