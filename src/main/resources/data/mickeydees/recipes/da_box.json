@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#*#",
+          "# #",
+          "###"
+        ],
+        "key": {
+          "#": {
+            "item": "minecraft:red_wool"
+          },
+          "*": {
+            "item": "minecraft:yellow_wool"
+          }
+        },
+        "result": {
+          "item": "mickeydees:da_box"
+        }
+    }
+    

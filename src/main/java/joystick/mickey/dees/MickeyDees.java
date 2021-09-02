@@ -31,6 +31,9 @@ public class MickeyDees implements ModInitializer {
 	
 	public static final Item MICKEY_DEES = new Item(new Item.Settings().group(ItemGroup.MISC)); // Dev item
 
+	// Utility 
+	public static final Item DA_BOX = new Item(new Item.Settings().group(ItemGroup.MISC));
+
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
 	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
 
@@ -59,6 +62,7 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
 		Registry.register(Registry.BLOCK, new Identifier("mickeydees", "nuggie_ore"), NUGGIE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_box"), DA_BOX);
 
 
 		// Foods
