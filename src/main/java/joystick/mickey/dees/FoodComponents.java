@@ -8,4 +8,5 @@ public class FoodComponents {
     public static final FoodComponent RAW_NUGGIE = (new FoodComponent.Builder()).hunger(1).saturationModifier((float) 0.5).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 120, 80), 0.8F).snack().build();
     public static final FoodComponent COOKED_NUGGIE = (new FoodComponent.Builder()).hunger(4).saturationModifier((float) 2.0).snack().build();
     public static final FoodComponent BIG_JON = (new FoodComponent.Builder()).hunger(9).saturationModifier((float) 13.0).build();
+    public static final FoodComponent DA_MEAL = (new FoodComponent.Builder()).hunger(10).saturationModifier((float) 13.0).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,125, 100), 0.8F).build();
 }

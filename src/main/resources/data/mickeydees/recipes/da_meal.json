@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#$#",
+          " *%",
+          "###"
+        ],
+        "key": {
+          "#": {
+            "item": "minecraft:red_wool"
+          },
+          "*": {
+              "item": "mickeydees:big_jon"
+          },
+          "$": {
+              "item": "minecraft:yellow_wool"
+          },
+          "%": {
+              "item": "mickeydees:cooked_nuggie"
+          }
+        },
+        "result": {
+          "item": "mickeydees:da_meal"
+        }
+    }
+    

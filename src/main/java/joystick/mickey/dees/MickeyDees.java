@@ -38,6 +38,7 @@ public class MickeyDees implements ModInitializer {
 	public static final Item RAW_NUGGIE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.RAW_NUGGIE));
 	public static final Item COOKED_NUGGIE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.COOKED_NUGGIE));
 	public static final Item BIG_JON = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.BIG_JON));
+	public static final Item DA_MEAL = new Item(new Item.Settings().group(ItemGroup.FOOD).food(FoodComponents.DA_MEAL));
 
 
 	// Spatulas
@@ -60,11 +61,10 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
 
-
-
 		// Foods
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_nuggie"), RAW_NUGGIE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "big_jon"), BIG_JON);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_meal"), DA_MEAL);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_nuggie"), COOKED_NUGGIE);
 
 		// Spatulas
