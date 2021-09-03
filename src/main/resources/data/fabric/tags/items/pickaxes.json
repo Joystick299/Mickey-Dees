@@ -1,6 +1,9 @@
 {
     "replace": false,
     "values": [
-      "mickeydees:flimsy_spatula"
+      "mickeydees:flimsy_spatula",
+      "mickeydees:gold_spatula",
+      "mickeydees:diamond_spatula",
+      "mickeydees:creative_spatula"
     ]
   }

@@ -1,20 +1,20 @@
 {
     "type": "minecraft:crafting_shaped",
         "pattern": [
+          "###",
           "#*#",
-          "# #",
           "###"
         ],
         "key": {
           "#": {
-            "item": "minecraft:red_wool"
+            "item": "mickeydees:french_fries"
           },
           "*": {
-            "item": "minecraft:gold_ingot"
+            "item": "mickeydees:fry_box"
           }
         },
         "result": {
-          "item": "mickeydees:da_box"
+          "item": "mickeydees:large_fry"
         }
     }
     

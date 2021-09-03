@@ -44,8 +44,8 @@ public class MickeyDees implements ModInitializer {
 	public static final Item MICKEY_DEES = new Item(new Item.Settings()); // Dev item
 
 	// Utility 
-	// Chnage DA BOX crafting recipe, instead of requiring yellow wool make it require a gold ingot instead 
 	public static final Item DA_BOX = new Item(new Item.Settings());
+	public static final Item FRY_BOX = new Item(new Item.Settings());
 
 
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
@@ -62,6 +62,7 @@ public class MickeyDees implements ModInitializer {
 	public static final Item RAW_FRENCH_FRIES = new Item(new Item.Settings().food(FoodComponents.RAW_FRENCH_FRIES));
 	public static final Item FRENCH_FRIES = new Item(new Item.Settings().food(FoodComponents.FRENCH_FRIES));
 	public static final Item STICKS_COOKIES = new Item(new Item.Settings().food(FoodComponents.STICKS_COOKIES));
+	public static final Item LARGE_FRY = new Item(new Item.Settings().food(FoodComponents.LARGE_FRY));
 
 	// Drinks
 	//Caca cola
@@ -85,8 +86,10 @@ public class MickeyDees implements ModInitializer {
 			stacks.add(new ItemStack(MickeyDees.BIG_JON));
 			stacks.add(new ItemStack(MickeyDees.COOKED_NUGGIE));
 			stacks.add(new ItemStack(MickeyDees.RAW_NUGGIE));
+			stacks.add(new ItemStack(MickeyDees.LARGE_FRY));
 			stacks.add(new ItemStack(MickeyDees.FRENCH_FRIES));
 			stacks.add(new ItemStack(MickeyDees.RAW_FRENCH_FRIES));
+			stacks.add(new ItemStack(MickeyDees.STICKS_COOKIES));
 			stacks.add(new ItemStack(MickeyDees.DA_MEAL));
 			// stacks.add(PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER));
 			// stacks.add(ItemStack.EMPTY);
@@ -121,6 +124,7 @@ public class MickeyDees implements ModInitializer {
 		.icon(() -> new ItemStack(MickeyDees.DA_BOX))
 		.appendItems(stacks -> {
 			stacks.add(new ItemStack(MickeyDees.DA_BOX));
+			stacks.add(new ItemStack(MickeyDees.FRY_BOX));
 		})
 		.build();
 
@@ -136,8 +140,9 @@ public class MickeyDees implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
 		Registry.register(Registry.BLOCK, new Identifier("mickeydees", "nuggie_ore"), NUGGIE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings()));
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_box"), DA_BOX);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "fry_box"), FRY_BOX);
 
 
 		// Foods
@@ -147,6 +152,8 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_nuggie"), COOKED_NUGGIE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_french_fries"), RAW_FRENCH_FRIES);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "french_fries"), FRENCH_FRIES);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "sticks_cookies"), STICKS_COOKIES);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "large_fry"), LARGE_FRY);
 
 
 		// Spatulas

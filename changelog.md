@@ -31,3 +31,14 @@ Changed the cooking time for nuggie_ore
 Added a creative ItemGroup
 Made the spatulas usable as pickaxes
 #### ------------------------------------------------
+
+## UPDATE 1.0.4 - 9/3/21
+
+Added foods:
+> Joystick's Cookies
+> French Fries (Textured!!)
+> Large Fry (Crafted using 8 french fries and a fry box!)
+
+Changed the crafting recipe of Da Box
+Added Fry box
+#### ------------------------------------------------
