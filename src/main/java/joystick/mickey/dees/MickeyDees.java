@@ -44,6 +44,7 @@ public class MickeyDees implements ModInitializer {
 	public static final Item MICKEY_DEES = new Item(new Item.Settings()); // Dev item
 
 	// Utility 
+	// Chnage DA BOX crafting recipe, instead of requiring yellow wool make it require a gold ingot instead 
 	public static final Item DA_BOX = new Item(new Item.Settings());
 
 
@@ -53,12 +54,14 @@ public class MickeyDees implements ModInitializer {
 
 	// Foods
 	// Dino Nuggie
+	// Add in a craftable box for the fries so people can make a "large fry" and with 8 french fries, and give a little bonus hunger for the effort
 	public static final Item RAW_NUGGIE = new Item(new Item.Settings().food(FoodComponents.RAW_NUGGIE));
 	public static final Item COOKED_NUGGIE = new Item(new Item.Settings().food(FoodComponents.COOKED_NUGGIE));
 	public static final Item BIG_JON = new Item(new Item.Settings().food(FoodComponents.BIG_JON));
 	public static final Item DA_MEAL = new Item(new Item.Settings().food(FoodComponents.DA_MEAL));
 	public static final Item RAW_FRENCH_FRIES = new Item(new Item.Settings().food(FoodComponents.RAW_FRENCH_FRIES));
 	public static final Item FRENCH_FRIES = new Item(new Item.Settings().food(FoodComponents.FRENCH_FRIES));
+	public static final Item STICKS_COOKIES = new Item(new Item.Settings().food(FoodComponents.STICKS_COOKIES));
 
 	// Drinks
 	//Caca cola
