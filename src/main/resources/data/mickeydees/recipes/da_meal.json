@@ -1,22 +1,37 @@
 {
     "type": "minecraft:crafting_shaped",
         "pattern": [
-          "#$#",
-          " *%",
-          "###"
+          "@#$",
+          "!*%",
+          "(&^"
         ],
         "key": {
-          "#": {
-            "item": "minecraft:red_wool"
+          "!": {
+            "item": "mickeydees:french_fries"
           },
-          "*": {
-              "item": "mickeydees:big_jon"
+          "@": {
+            "item": "mickeydees:big_jon"
+          },
+          "#": {
+            "item": "mickeydees:cooked_nuggie"
           },
           "$": {
-              "item": "minecraft:yellow_wool"
+            "item": "mickeydees:french_fries"
           },
           "%": {
-              "item": "mickeydees:cooked_nuggie"
+            "item": "mickeydees:"
+          },
+          "^": {
+            "item": "mickeydees:"
+          },
+          "&": {
+            "item": "mickeydees:"
+          },
+          "(": {
+            "item": "mickeydees:"
+          },
+          "*": {
+              "item": "mickeydees:da_box"
           }
         },
         "result": {
