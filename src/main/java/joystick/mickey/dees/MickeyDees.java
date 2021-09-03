@@ -63,6 +63,8 @@ public class MickeyDees implements ModInitializer {
 	public static final Item FRENCH_FRIES = new Item(new Item.Settings().food(FoodComponents.FRENCH_FRIES));
 	public static final Item STICKS_COOKIES = new Item(new Item.Settings().food(FoodComponents.STICKS_COOKIES));
 	public static final Item LARGE_FRY = new Item(new Item.Settings().food(FoodComponents.LARGE_FRY));
+	// Texture da_pie and make sure to give it a crafting recipe
+	public static final Item DA_PIE = new Item(new Item.Settings().food(FoodComponents.DA_PIE));
 
 	// Drinks
 	//Caca cola
@@ -91,6 +93,7 @@ public class MickeyDees implements ModInitializer {
 			stacks.add(new ItemStack(MickeyDees.RAW_FRENCH_FRIES));
 			stacks.add(new ItemStack(MickeyDees.STICKS_COOKIES));
 			stacks.add(new ItemStack(MickeyDees.DA_MEAL));
+			stacks.add(new ItemStack(MickeyDees.DA_PIE));
 			// stacks.add(PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER));
 			// stacks.add(ItemStack.EMPTY);
 			
@@ -154,6 +157,7 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "french_fries"), FRENCH_FRIES);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "sticks_cookies"), STICKS_COOKIES);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "large_fry"), LARGE_FRY);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_pie"), DA_PIE);
 
 
 		// Spatulas

@@ -13,4 +13,5 @@ public class FoodComponents {
     public static final FoodComponent FRENCH_FRIES = (new FoodComponent.Builder()).hunger(3).saturationModifier((float) 7.5).snack().build();
     public static final FoodComponent STICKS_COOKIES = (new FoodComponent.Builder()).hunger(3).saturationModifier((float) 9.0).snack().build();
     public static final FoodComponent LARGE_FRY = (new FoodComponent.Builder()).hunger(8).saturationModifier((float) 15.5).build();
+    public static final FoodComponent DA_PIE = (new FoodComponent.Builder()).hunger(3).saturationModifier((float) 7.0).snack().build();
 }
