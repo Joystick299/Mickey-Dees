@@ -7,8 +7,13 @@
         ],
         "key": {
           "#": {
-            "item": "minecraft:bread"
+            "item": "minecraft:wheat"
+          },
+        "key":{
+          "*":{
+            "item": "minecraft:apple"
           }
+        }
         },
         "result": {
           "item": "mickeydees:da_pie"
