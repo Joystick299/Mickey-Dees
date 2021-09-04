@@ -46,7 +46,7 @@ public class MickeyDees implements ModInitializer {
 	// Utility 
 	public static final Item DA_BOX = new Item(new Item.Settings());
 	public static final Item FRY_BOX = new Item(new Item.Settings());
-
+	public static final Item DINO_STENCIL = new Item(new Item.Settings());
 
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
 	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
@@ -128,6 +128,7 @@ public class MickeyDees implements ModInitializer {
 		.appendItems(stacks -> {
 			stacks.add(new ItemStack(MickeyDees.DA_BOX));
 			stacks.add(new ItemStack(MickeyDees.FRY_BOX));
+			stacks.add(new ItemStack(MickeyDees.DINO_STENCIL));
 		})
 		.build();
 
@@ -146,6 +147,7 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings()));
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_box"), DA_BOX);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "fry_box"), FRY_BOX);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_stencil"), DINO_STENCIL);
 
 
 		// Foods
