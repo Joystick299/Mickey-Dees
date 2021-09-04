@@ -43,12 +43,9 @@ public class MickeyDees implements ModInitializer {
 	// Utility 
 	public static final Item DA_BOX = new Item(new Item.Settings());
 	public static final Item FRY_BOX = new Item(new Item.Settings());
-<<<<<<< HEAD
 	public static final Item DINO_STENCIL = new Item(new Item.Settings());
-=======
 	public static final Item DA_TOY = new Item(new Item.Settings());
 
->>>>>>> 35c0f6de102d8615cb4d90c0eb1468d46218befa
 
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
 	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
@@ -174,7 +171,7 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_pie"), DA_PIE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_nuggie"), DINO_NUGGIE);
 
-
+		// Fuck you riley but i also love you 
 		// Spatulas
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "flimsy_spatula"), FLIMSY_SPATULA);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "gold_spatula"), GOLD_SPATULA);
