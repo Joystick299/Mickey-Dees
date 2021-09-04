@@ -37,9 +37,6 @@ import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.Feature;
 
 public class MickeyDees implements ModInitializer {
-	
-
-	
 
 	public static final Item MICKEY_DEES = new Item(new Item.Settings()); // Dev item
 
@@ -65,6 +62,7 @@ public class MickeyDees implements ModInitializer {
 	public static final Item LARGE_FRY = new Item(new Item.Settings().food(FoodComponents.LARGE_FRY));
 	// Texture da_pie and make sure to give it a crafting recipe
 	public static final Item DA_PIE = new Item(new Item.Settings().food(FoodComponents.DA_PIE));
+	public static final Item DINO_NUGGIE = new Item(new Item.Settings().food(FoodComponents.DINO_NUGGIE));
 
 	// Drinks
 	//Caca cola
@@ -94,6 +92,7 @@ public class MickeyDees implements ModInitializer {
 			stacks.add(new ItemStack(MickeyDees.STICKS_COOKIES));
 			stacks.add(new ItemStack(MickeyDees.DA_MEAL));
 			stacks.add(new ItemStack(MickeyDees.DA_PIE));
+			stacks.add(new ItemStack(MickeyDees.DINO_NUGGIE));
 			// stacks.add(PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER));
 			// stacks.add(ItemStack.EMPTY);
 			
@@ -158,6 +157,7 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "sticks_cookies"), STICKS_COOKIES);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "large_fry"), LARGE_FRY);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_pie"), DA_PIE);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_nuggie"), DINO_NUGGIE);
 
 
 		// Spatulas
