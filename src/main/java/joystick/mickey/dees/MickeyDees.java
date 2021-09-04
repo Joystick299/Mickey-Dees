@@ -129,11 +129,8 @@ public class MickeyDees implements ModInitializer {
 		.appendItems(stacks -> {
 			stacks.add(new ItemStack(MickeyDees.DA_BOX));
 			stacks.add(new ItemStack(MickeyDees.FRY_BOX));
-<<<<<<< HEAD
 			stacks.add(new ItemStack(MickeyDees.DINO_STENCIL));
-=======
 			stacks.add(new ItemStack(MickeyDees.DA_TOY));
->>>>>>> 35c0f6de102d8615cb4d90c0eb1468d46218befa
 		})
 		.build();
 
@@ -152,11 +149,8 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings()));
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_box"), DA_BOX);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "fry_box"), FRY_BOX);
-<<<<<<< HEAD
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_stencil"), DINO_STENCIL);
-=======
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_toy"), DA_TOY);
->>>>>>> 35c0f6de102d8615cb4d90c0eb1468d46218befa
 
 
 		// Foods
