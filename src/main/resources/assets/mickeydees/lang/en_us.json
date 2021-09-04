@@ -1,0 +1,37 @@
+{
+    "item.mickeydees.mickey_dees": "§e§n§oMickey Dees Dev Item",
+
+
+    "item.mickeydees.raw_nuggie": "Raw Nuggie",
+    "item.mickeydees.cooked_nuggie": "Cooked Nuggie",
+    "block.mickeydees.nuggie_ore": "Nuggie Ore",
+    "item.mickeydees.big_jon": "Big Jon",
+    "item.mickeydees.raw_french_fries": "Raw French Fries",
+    "item.mickeydees.french_fries": "French Fries",
+    "item.mickeydees.large_fry": "Large Fry",
+    "item.mickeydees.da_box": "Da Box",
+    "item.mickeydees.fry_box": "Fry Box",
+    "item.mickeydees.da_meal": "§d§lDa Meal",
+    "item.mickeydees.sticks_cookies": "Joystick's Brand Cookies",
+    "item.mickeydees.da_pie": "Da Pie",
+    "item.mickeydees.dino_nuggie": "Dino Nuggie",
+    "item.mickeydees.da_toy": "§d§lSavi0r's Toy",
+    
+
+
+
+    "item.mickeydees.flimsy_spatula": "Flimsy Spatula",
+    "item.mickeydees.gold_spatula": "Gold Spatula",
+    "item.mickeydees.diamond_spatula": "Diamond Spatula",
+    "item.mickeydees.greasy_spatula": "Greasy Spatula",
+    "item.mickeydees.creative_spatula": "§d§lCreative Spatula",
+
+
+
+
+
+    "itemGroup.mickeydees.food": "MickeyDees Food",
+    "itemGroup.mickeydees.spatulas": "MickeyDees Spatulas",
+    "itemGroup.mickeydees.ore": "MickeyDees Ore",
+    "itemGroup.mickeydees.misc": "MickeyDees Misc"
+}

@@ -43,14 +43,19 @@ public class MickeyDees implements ModInitializer {
 	// Utility 
 	public static final Item DA_BOX = new Item(new Item.Settings());
 	public static final Item FRY_BOX = new Item(new Item.Settings());
+<<<<<<< HEAD
 	public static final Item DINO_STENCIL = new Item(new Item.Settings());
+=======
+	public static final Item DA_TOY = new Item(new Item.Settings());
+
+>>>>>>> 35c0f6de102d8615cb4d90c0eb1468d46218befa
 
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
 	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
 
 
 	// Foods
-	// Dino Nuggie
+
 	// Add in a craftable box for the fries so people can make a "large fry" and with 8 french fries, and give a little bonus hunger for the effort
 	public static final Item RAW_NUGGIE = new Item(new Item.Settings().food(FoodComponents.RAW_NUGGIE));
 	public static final Item COOKED_NUGGIE = new Item(new Item.Settings().food(FoodComponents.COOKED_NUGGIE));
@@ -127,7 +132,11 @@ public class MickeyDees implements ModInitializer {
 		.appendItems(stacks -> {
 			stacks.add(new ItemStack(MickeyDees.DA_BOX));
 			stacks.add(new ItemStack(MickeyDees.FRY_BOX));
+<<<<<<< HEAD
 			stacks.add(new ItemStack(MickeyDees.DINO_STENCIL));
+=======
+			stacks.add(new ItemStack(MickeyDees.DA_TOY));
+>>>>>>> 35c0f6de102d8615cb4d90c0eb1468d46218befa
 		})
 		.build();
 
@@ -146,7 +155,11 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings()));
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_box"), DA_BOX);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "fry_box"), FRY_BOX);
+<<<<<<< HEAD
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_stencil"), DINO_STENCIL);
+=======
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_toy"), DA_TOY);
+>>>>>>> 35c0f6de102d8615cb4d90c0eb1468d46218befa
 
 
 		// Foods
