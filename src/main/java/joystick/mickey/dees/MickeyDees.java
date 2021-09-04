@@ -64,7 +64,8 @@ public class MickeyDees implements ModInitializer {
 	public static final Item LARGE_FRY = new Item(new Item.Settings().food(FoodComponents.LARGE_FRY));
 	// Texture da_pie and make sure to give it a crafting recipe
 	public static final Item DA_PIE = new Item(new Item.Settings().food(FoodComponents.DA_PIE));
-	public static final Item DINO_NUGGIE = new Item(new Item.Settings().food(FoodComponents.DINO_NUGGIE));
+	public static final Item RAW_DINO_NUGGIE = new Item(new Item.Settings().food(FoodComponents.RAW_DINO_NUGGIE));
+	public static final Item COOKED_DINO_NUGGIE = new Item(new Item.Settings().food(FoodComponents.COOKED_DINO_NUGGIE));
 
 	// Drinks
 	//Caca cola
@@ -94,7 +95,8 @@ public class MickeyDees implements ModInitializer {
 			stacks.add(new ItemStack(MickeyDees.STICKS_COOKIES));
 			stacks.add(new ItemStack(MickeyDees.DA_MEAL));
 			stacks.add(new ItemStack(MickeyDees.DA_PIE));
-			stacks.add(new ItemStack(MickeyDees.DINO_NUGGIE));
+			stacks.add(new ItemStack(MickeyDees.RAW_DINO_NUGGIE));
+			stacks.add(new ItemStack(MickeyDees.COOKED_DINO_NUGGIE));
 			// stacks.add(PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER));
 			// stacks.add(ItemStack.EMPTY);
 			
@@ -163,7 +165,8 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "sticks_cookies"), STICKS_COOKIES);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "large_fry"), LARGE_FRY);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_pie"), DA_PIE);
-		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_nuggie"), DINO_NUGGIE);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_dino_nuggie"), RAW_DINO_NUGGIE);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_dino_nuggie"), COOKED_DINO_NUGGIE);
 
 		// Fuck you riley but i also love you 
 		// Spatulas

@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "mickeydees:raw_dino_nuggie"
+    },
+    "result": "mickeydees:cooked_dino_nuggie",
+    "experience": 1,
+    "cookingtime": 20
+}

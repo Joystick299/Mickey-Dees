@@ -42,3 +42,12 @@ Added foods:
 Changed the crafting recipe of Da Box
 Added Fry box
 #### ------------------------------------------------
+
+## UPDATE 1.0.5 - 9/4/21
+
+Added foods:
+> Dino Nuggies! (Raw and Cooked Variants)
+> Victor's Apple Pie
+
+Added Da_Toy
+#### ------------------------------------------------
