@@ -5,6 +5,9 @@
     "item.mickeydees.raw_nuggie": "Raw Nuggie",
     "item.mickeydees.cooked_nuggie": "Cooked Nuggie",
     "block.mickeydees.nuggie_ore": "Nuggie Ore",
+    "block.mickeydees.barbeque_ore": "Barbeque Ore",
+    "item.mickeydees.bbq_sauce": "BBQ Sauce",
+    "item.mickeydees.raw_bbq": "Raw BBQ",
     "item.mickeydees.big_jon": "Big Jon",
     "item.mickeydees.raw_french_fries": "Raw French Fries",
     "item.mickeydees.french_fries": "French Fries",
@@ -35,5 +38,6 @@
     "itemGroup.mickeydees.food": "MickeyDees Food",
     "itemGroup.mickeydees.spatulas": "MickeyDees Spatulas",
     "itemGroup.mickeydees.ore": "MickeyDees Ore",
-    "itemGroup.mickeydees.misc": "MickeyDees Misc"
+    "itemGroup.mickeydees.misc": "MickeyDees Misc",
+    "itemGroup.mickeydees.sauce": "MickeyDees Sauces"
 }

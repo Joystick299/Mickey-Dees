@@ -50,6 +50,10 @@ public class MickeyDees implements ModInitializer {
 	public static final Block NUGGIE_ORE = new NuggieOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
 	private static ConfiguredFeature<?, ?> NUGGIE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, NUGGIE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
 
+	public static final Block BARBEQUE_ORE = new BarbequeOre(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES).requiresTool());
+	private static ConfiguredFeature<?, ?> BARBEQUE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, BARBEQUE_ORE.getDefaultState(),9)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(120)))).spreadHorizontally().repeat(20);
+	
+	public static final Item RAW_BBQ = new Item(new Item.Settings());
 
 	// Foods
 
@@ -81,6 +85,24 @@ public class MickeyDees implements ModInitializer {
 
 	
 
+
+
+
+
+	// Sauces
+
+	public static final Item BBQ_SAUCE = new Item(new Item.Settings());
+	public static final Item KETCHUP = new Item(new Item.Settings());
+	public static final Item MICKEY_DEES_SAUCE = new Item(new Item.Settings());
+
+
+
+
+
+
+
+
+
  
 	public static final ItemGroup MICKEY_FOOD = FabricItemGroupBuilder.create(
 		new Identifier("mickeydees", "food"))
@@ -97,6 +119,19 @@ public class MickeyDees implements ModInitializer {
 			stacks.add(new ItemStack(MickeyDees.DA_PIE));
 			stacks.add(new ItemStack(MickeyDees.RAW_DINO_NUGGIE));
 			stacks.add(new ItemStack(MickeyDees.COOKED_DINO_NUGGIE));
+			// stacks.add(PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER));
+			// stacks.add(ItemStack.EMPTY);
+			
+		})
+		.build();
+
+	public static final ItemGroup MICKEY_SAUCE = FabricItemGroupBuilder.create(
+		new Identifier("mickeydees", "sauce"))
+		.icon(() -> new ItemStack(MickeyDees.BIG_JON))
+		.appendItems(stacks -> {
+			stacks.add(new ItemStack(MickeyDees.BBQ_SAUCE));
+			stacks.add(new ItemStack(MickeyDees.KETCHUP));
+			stacks.add(new ItemStack(MickeyDees.MICKEY_DEES_SAUCE));
 			// stacks.add(PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER));
 			// stacks.add(ItemStack.EMPTY);
 			
@@ -122,6 +157,7 @@ public class MickeyDees implements ModInitializer {
 		.icon(() -> new ItemStack(MickeyDees.NUGGIE_ORE))
 		.appendItems(stacks -> {
 			stacks.add(new ItemStack(MickeyDees.NUGGIE_ORE));
+			stacks.add(new ItemStack(MickeyDees.BARBEQUE_ORE));
 		})
 		.build();
 
@@ -148,11 +184,14 @@ public class MickeyDees implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees"), MICKEY_DEES);
 		Registry.register(Registry.BLOCK, new Identifier("mickeydees", "nuggie_ore"), NUGGIE_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("mickeydees", "barbeque_ore"), BARBEQUE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "nuggie_ore"), new BlockItem(NUGGIE_ORE, new Item.Settings()));
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "barbeque_ore"), new BlockItem(BARBEQUE_ORE, new Item.Settings()));
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_box"), DA_BOX);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "fry_box"), FRY_BOX);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "dino_stencil"), DINO_STENCIL);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "da_toy"), DA_TOY);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_bbq"), RAW_BBQ);
 
 
 		// Foods
@@ -168,7 +207,12 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "raw_dino_nuggie"), RAW_DINO_NUGGIE);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "cooked_dino_nuggie"), COOKED_DINO_NUGGIE);
 
-		// Fuck you riley but i also love you 
+		// Sauces
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "bbq_sauce"), BBQ_SAUCE);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "ketchup"), KETCHUP);
+		Registry.register(Registry.ITEM, new Identifier("mickeydees", "mickey_dees_sauce"), MICKEY_DEES_SAUCE);
+
+
 		// Spatulas
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "flimsy_spatula"), FLIMSY_SPATULA);
 		Registry.register(Registry.ITEM, new Identifier("mickeydees", "gold_spatula"), GOLD_SPATULA);
@@ -181,5 +225,10 @@ public class MickeyDees implements ModInitializer {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, nuggieOreOverworld.getValue(), NUGGIE_ORE_OVERWORLD);
 		// BiomeModifications is not supported right now, so it identifies as deprecated.
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, nuggieOreOverworld);
+
+		RegistryKey<ConfiguredFeature<?, ?>> barbequeOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("mickeydees", "barbeque_ore"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, barbequeOreOverworld.getValue(), BARBEQUE_ORE_OVERWORLD);
+		// BiomeModifications is not supported right now, so it identifies as deprecated.
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, barbequeOreOverworld);
 	}
 }

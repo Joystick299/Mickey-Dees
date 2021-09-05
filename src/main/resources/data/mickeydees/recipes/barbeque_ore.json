@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "mickeydees:barbeque_ore"
+    },
+    "result": "mickeydees:raw_bbq",
+    "experience": 0.7,
+    "cookingtime": 140
+}

@@ -51,3 +51,15 @@ Added foods:
 
 Added Da_Toy
 #### ------------------------------------------------
+
+## UPDATE 1.0.6 - 9/5/21
+
+Added:
+> Barbeque Sauce (Not textured)
+> Raw BBQ
+> Barbeque Ore
+> Ketchup (Not working)
+> MickeyDees Sauce (Not working)
+
+
+#### ------------------------------------------------
